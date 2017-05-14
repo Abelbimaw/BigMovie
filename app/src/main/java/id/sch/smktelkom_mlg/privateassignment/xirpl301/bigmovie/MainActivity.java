@@ -1,8 +1,9 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl301.bigmovie;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,7 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import id.sch.smktelkom_mlg.privateassignment.xirpl301.bigmovie.adapter.SourceAdapter;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, SourceAdapter.ISourceAdapter {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -52,14 +55,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
     }
 
@@ -80,10 +76,22 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(this, ActivityAbout.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
+    }
+
+    @Override
+    public void showArticles(String title, String overview, String poster_path) {
+
     }
 
     /**
@@ -134,25 +142,37 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            // Return a PlaceholderFragment (defined as a static inner class below).i
+            if (position == 0)
+                return new PopulerFragment();
+            else if (position == 1)
+                return new NowPlayingFragment();
+            else if (position == 2)
+                return new UpcomingFragment();
+            else if (position == 3)
+                return new TopRatedFragment();
+            else
+                return PlaceholderFragment.newInstance(position + 1);
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "POPULER";
                 case 1:
-                    return "SECTION 2";
+                    return "NOW PLAYING";
                 case 2:
-                    return "SECTION 3";
+                    return "UPCOMING";
+                case 3:
+                    return "TOP RATED";
+
             }
             return null;
         }

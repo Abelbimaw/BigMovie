@@ -1,10 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="id.sch.smktelkom_mlg.privateassignment.xirpl301.bigmovie.MainActivity">
+    tools:context="id.sch.smktelkom_mlg.privateassignment.xirpl425.nontonyuk.MainActivity">
     <item
         android:id="@+id/action_settings"
+        android:icon="@drawable/ic_info_outline_black_24dp"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="About"
+        app:showAsAction="always" />
 </menu>
