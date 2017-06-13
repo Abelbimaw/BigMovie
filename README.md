@@ -15,7 +15,7 @@
 ## Library dari Local Database yang digunakan pada Aplikasi : 
 #### SQLite dasar
 ## Deskripsi singkat :
-#### Aplikasi ini merupakan aplikasi yang menggunakan API untuk menampilkan data. Aplikasi ini  menggunakan API TMDb untuk mengambil data yang berupa seputar film. Aplikasi ini bisa menampilkan film populer, film yang memiliki rating tinggi, film yang akan hadir di dunia perfilman, dan film yang akan sedang tayang. Aplikasi ini menampilkan gambar, judul dan vote rate.
+#### Aplikasi ini merupakan aplikasi yang menggunakan API untuk menampilkan data. Aplikasi ini  menggunakan API TMDb untuk mengambil data yang berupa seputar film. Aplikasi ini bisa menampilkan film populer, film yang memiliki rating tinggi, film yang akan hadir di dunia perfilman, dan film yang akan sedang tayang. Aplikasi ini menampilkan gambar, judul, deskripsi dan vote rate.
 ## Kelebihan dari Aplikasi :
 #### design simple,mudah digunakan untuk segala umur
 ## Screenshot dari Aplikasi :
