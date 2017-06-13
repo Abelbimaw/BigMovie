@@ -31,9 +31,3 @@ About |
 ------------ |
 ![4](https://github.com/Abelbimaw/BigMovie/blob/master/Screenshot_20170514-224223%5B1%5D.jpg)|
 
-# ScreenShot
-![Image SS1](https://github.com/Abelbimaw/BigMovie/blob/master/Screenshot_20170514-224203%5B1%5D.jpg)
-![Image SS2](https://github.com/Abelbimaw/BigMovie/blob/master/Screenshot_20170514-224209%5B1%5D.jpg)
-![Image SS3](https://github.com/Abelbimaw/BigMovie/blob/master/Screenshot_20170514-224216%5B1%5D.jpg)
-![Image SS2](https://github.com/Abelbimaw/BigMovie/blob/master/Screenshot_20170514-224220%5B1%5D.jpg)
-![Image SS3](https://github.com/Abelbimaw/BigMovie/blob/master/Screenshot_20170514-224223%5B1%5D.jpg)
